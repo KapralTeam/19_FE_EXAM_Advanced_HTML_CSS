@@ -103,6 +103,9 @@ $(document).ready(function() {
             case 40:
                 direction = "down";
                 break;
+            case 27:
+                gameOver();
+                break;
         }
     });
 });
