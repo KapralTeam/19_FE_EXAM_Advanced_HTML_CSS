@@ -4,7 +4,8 @@ Założenia gry:
 1. Plansza gry ma rozmiary 10x10 pól,
 2. Mario porusza się w jednym z czterech kierunków: góra, dół, lewo, prawo,
 3. Gdy Mario uderzy w ścianę, następuje koniec gry,
-4. Na planszy obecna jest moneta. Gdy Mario ją zbierze, umieszczana jest kolejna, na losowym polu.
+4. Na planszy obecna jest moneta. Gdy Mario ją zbierze, umieszczana jest 
+   kolejna, na losowym polu.
 **/
 
 $(document).ready(function() {
@@ -34,7 +35,8 @@ $(document).ready(function() {
 
     // sprawdzamy, czy nie uderzył w ścianę
     function checkBorder() {
-        if ((marioX < 0) || (marioX > mapWidth) || (marioY < 0) || (marioY > mapHeight)) {
+        if ((marioX < 0) || (marioX > mapWidth) || 
+                (marioY < 0) || (marioY > mapHeight)) {
             gameOver();
         }
     }
@@ -85,7 +87,7 @@ $(document).ready(function() {
     addCoin();
     var gameHandler = setInterval(moveMario, 250);
 
-    // reagujemy na klawiszed strzałek
+    // reagujemy na klawisze strzałek
     $(document).keydown(function(event) {
         var keyPressed = event.which;
         switch(keyPressed) {
