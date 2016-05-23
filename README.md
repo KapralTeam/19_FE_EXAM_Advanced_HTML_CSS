@@ -1,2 +1,2 @@
 # MarioGame
-A simple Javascript game for demonstrstion reasons.
+A simple Javascript game for demonstration reasons.
