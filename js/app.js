@@ -83,9 +83,9 @@ $(document).ready(function() {
     }
 
     // Mario, ruszaj!
-    showMario();
-    addCoin();
-    var gameHandler = setInterval(moveMario, 250);
+    showMario();  // pokaż Mario na wyjściowej pozycji
+    addCoin();  // wylosuj pierwszą monetę
+    var gameHandler = setInterval(moveMario, 250);  // ruszaj!
 
     // reagujemy na klawisze strzałek
     $(document).keydown(function(event) {
