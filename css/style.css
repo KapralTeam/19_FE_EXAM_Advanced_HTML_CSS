@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#game-over {
+    margin: 0 auto;
+    border: 8px solid white;
+    background-color: red;
+    display: none;
+}
+
+#game-over h1 {
+    color: white;
+    font-family: Ubuntu;
+    font-size: 64px;
+    text-align: center;
+}
+
+#score {
+    background-color: blue;
+    font-family: Ubuntu;
+    font-size: 18px;
+}
+
+#score h1 {
+    color: white;
+    text-align: center;
+}
+
+#debug {
+    display: none;
+    margin: 0 auto;
+    font-family: Ubuntu Mono;
+    font-size: 16px;
+    width: 550px;
+    height: 250px;
+    overflow: auto;
+    background-color: #666;
+    color: white;
+}
+
+#board div {
+    width: 64px;
+    height: 64px;
+    border: 1px solid #888;
+    float: left;
+}
+
+#board {
+    width: 640px;
+    height: 640px;
+    margin: 0 auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.coin {
+    background-color: wheat;
+    background-image: url("../images/coin.png");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.mario {
+    background-color: white;
+    background-image: url("../images/mario.png");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
