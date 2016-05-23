@@ -13,12 +13,6 @@ $(document).ready(function() {
     var direction = "right";  // kierunek poruszania się Mario
     var score = 0; // punkty w grze
 
-    // funkcja debugowania
-    function debug(msg) {
-        var debug = $("#debug").html();
-        $("#debug").html(debug + "<br>" + msg);
-    }
-
     // wyliczenie numeru komórki na podst. koordynatów x, y
     function calculatePosition(x, y) {
         return $("#board div").eq(x + y * 10);
@@ -48,7 +42,6 @@ $(document).ready(function() {
     // sprawdzamy, czy zebrał monetę
     function checkCoin() {
         var actualPosition = calculatePosition(marioX, marioY);
-        debug(actualPosition);
         if(actualPosition.hasClass("coin")) {
             score++;
             $("#score").html("<h1>Wynik: " + score + "</h1>");
@@ -58,7 +51,6 @@ $(document).ready(function() {
 
     // Game Over
     function gameOver() {
-        debug("Game over, man! " + marioX + ", " + marioY);
         clearInterval(gameHandler);
         $("#board div").removeClass("mario");
         $("#board div").removeClass("coin");
@@ -83,7 +75,6 @@ $(document).ready(function() {
                 marioY++;
                 break;
         }
-        // debug("<b>direction:</b> " + direction);
         checkBorder();
         checkCoin();
         showMario();
@@ -111,7 +102,5 @@ $(document).ready(function() {
                 direction = "down";
                 break;
         }
-        debug("pos: " + keyPressed);
     });
-    
 });
